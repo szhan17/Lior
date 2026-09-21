@@ -11,8 +11,6 @@ function startMusic() {
   backgroundMusic.play().catch(() => {});
 }
 
-startMusic();
-
 function enterParty() {
   startMusic();
   entryScreen.classList.add('is-leaving');
