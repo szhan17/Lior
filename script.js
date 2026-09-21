@@ -4,8 +4,17 @@ const lightbox = document.getElementById('lightbox');
 const lightboxImage = document.getElementById('lightboxImage');
 const lightboxCaption = document.getElementById('lightboxCaption');
 const lightboxClose = document.getElementById('lightboxClose');
+const backgroundMusic = document.getElementById('backgroundMusic');
+
+function startMusic() {
+  backgroundMusic.currentTime = 0;
+  backgroundMusic.play().catch(() => {});
+}
+
+startMusic();
 
 function enterParty() {
+  startMusic();
   entryScreen.classList.add('is-leaving');
   document.body.classList.remove('locked');
   window.setTimeout(() => {
